@@ -7,12 +7,13 @@ Do not use it in production environment.
 
 # Usage
 
-    docker run -d --name=lemp \
-      -v /var/www/project-name/:/var/www/ \
-      -v /var/lib/mysql:/var/lib/mysql \
-      -p 8008:80 \
-      -t project-name \
-      stevenmc/docker-lemp:latest
+	docker build -t cakephp-lemp .
+
+docker run -d --name=lemp \
+  -v /var/www/project-dir/:/var/www/ \
+  -v /var/lib/mysql:/var/lib/mysql \
+  -p 8008:80 \
+  -t cakephp-lemp 
 
 # Detail
 
